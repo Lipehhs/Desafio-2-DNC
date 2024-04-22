@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>DNC Weather</title>
+</head>
+
+<body>
+    <header>
+        <h1>DncWeather</h1>
+        <div>
+            <div>
+                <h3>Endereços</h3>
+            </div>
+            <div>
+                <h3>Previsão do tempo</h3>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <div id="texto-container">
+            <p>Descubra Mais com Precisão: <br>
+                Previsões do Tempo e endereços <br>
+                em tempo real.</p>
+        </div>
+        <div id="imagem-nuvem">
+            <img src="imagens/nuvem.svg" alt="">
+        </div>
+    </div>
+
+    <div id="formulario">
+        <form action="">
+            <p>Primeiro Nome:</p>
+            </h2>
+            <input placeholder="Insira seu primeiro nome:" class="required" oninput="nameV()" id="nome" type="text">
+            <br>
+            <span class="span-required">O nome de ter no minimo 3 caracteres</span>
+            <p>E-mail:</p>
+            <input placeholder="Insira seu e-mail" class="required" oninput="emailV()" id="email" type="text"> <br>
+            <span class="span-required">O email deve ter o formato email@example.com</span>
+            <p>Digite seu CEP:</p>
+            <input placeholder="Insira o CEP" id="cep" type="text">
+            <p>Digite a latitude e longitude para saber a previsão:</p>
+            <div>
+                <input placeholder="Latitude" id="lat" type="text">
+
+                <input placeholder="Longitude" id="long" type="text">
+            </div>
+
+            <input type="button" onclick="acessar()" value="Acessar">
+        </form>
+    </div>
+
+    <div id="resultados-cep">
+        <div id="titulo-cep">
+            <h1>Resultado da busca por CEP:</h1>
+            <img src="imagens/localiza.svg" alt="">
+        </div>
+        <div id="inf">
+            <input type="text" id="log" placeholder="Logradouro/nome" readonly class="infos">
+            <input type="text" placeholder="Bairro/Distrito" readonly class="infos">
+            <input type="text" id="loc" placeholder="localidade/UF" readonly class="infos">
+        </div>
+
+
+        <div id="resultado-busca">
+
+            <input type="text" readonly name="" id="rua">
+            <input type="text" readonly id="Bairro">
+            <input type="text" readonly id="estado">
+        </div>
+
+
+    </div>
+
+    <div id="resultado-previsao">
+        <div>
+            <h1>Previsão do Tempo na Região: </h1>
+            <img src="imagens/nuvemss.svg" alt="">
+        </div>
+    </div>
+    <div id="previsaoDiv">
+        <h4>Previsão de tempo de acordo com a região:</h4>
+        <div id="resposta"></div>
+    </div>
+
+
+    <footer>
+        <div id="div1">
+            <h4>Termos de Uso</h4>
+        </div>
+        <div id="div2">
+            <h4>Politicas de Privacidade</h4>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
