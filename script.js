@@ -3,7 +3,7 @@ async function getAddressByCep(){
     try{
         const response = await fetch (`http://viacep.com.br/ws/${cep}/json/`)
         const data = await response.json()
-        // console.log(data);
+
         document.querySelector('#rua').value = data.logradouro
         document.querySelector('#Bairro').value = data.bairro
         document.querySelector('#estado').value = data.uf
